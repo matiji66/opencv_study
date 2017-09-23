@@ -1,16 +1,19 @@
 import cv2
 
 from .managers import WindowManager,CaptureManager
+import .filter
 
 VIDEO_FILE= "/home/scott/temp/opencv/pycv-master/first_edition/chapter2/miscellaneous/MyInputVid.avi"
 
 class Cameo(object):
     def __init__(self):
         self._windowManager = WindowManager('Cameo',
-        self.onKeypress) # pass a class method to another class, is this s problem?
+                self.onKeypress)
         self._captureManger = CaptureManager(
                     cv2.VideoCapture(VIDEO_FILE),self._windowManager,True
                 )
+        self._curveFilter=filters.BGRPortraCurveFilter()
+
 
     def run(self):
         """Run the main loop"""
@@ -20,6 +23,9 @@ class Cameo(object):
             self._captureManger.enterFrame()
             frame = self._captureManger.frame
             # todo: Filter the frame
+            filters.strokeEdges(frame,frame)
+            self._curveFilter.apply(frame,frame)
+
             self._captureManger.exitFrame()
             self._windowManager.processEvents()
 

@@ -1,12 +1,1 @@
-## IO
-* default color map is: BGR (NOT RGB)
-
-### Image
-
-Basically numpy ndarray
-  * imread
-  * imshow
-
-### Video
-  * VideoCapture
-  * VideoWriter
+Draft and exercise for studying opencv with pythong
