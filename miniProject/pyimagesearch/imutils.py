@@ -9,9 +9,9 @@ def resize(image, width=None, height=None,
 
     if width is None:
         r=height/float(h)
-        dim=(int(w*r), h)
+        dim=(int(w*r), height)
     else:
         r=width/float(w)
-        dim=(w, int(h*r))
+        dim=(width, int(h*r))
     resized=cv2.resize(image,dim,interpolation=inter)
     return resized
