@@ -11,9 +11,9 @@ etc,
 """
 
 def test_warpAffine():
-    img=cv2.imread('messi5.jpg',0)
+    img = cv2.imread('messi5.jpg', 0)
     rows, cols = img.shape
-    M=np.float32([[1,0,100],[0,1,50]])
+    M = np.float32([[1,0,100],[0,1,50]])
     dst=cv2.warpAffine(img,M,(cols,rows))
 
     cv2.imshow("imge",dst)
@@ -47,8 +47,8 @@ def test_Rotation():
 
 def test_affineTransformation():
     img = cv2.imread('drawing.png')
-    rows,cols,ch = img.shape
     pts1 = np.float32([[50,50],[200,50],[50,200]])
+    rows,cols,ch = img.shape
     pts2 = np.float32([[10,100],[200,50],[100,250]])
     M = cv2.getAffineTransform(pts1,pts2)
     dst = cv2.warpAffine(img,M,(cols,rows))

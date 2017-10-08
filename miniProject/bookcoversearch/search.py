@@ -1,7 +1,7 @@
 from __future__ import print_function
 from pyimagesearch.coverdecriptor import CoverDescriptor
 from pyimagesearch.covermatcher import CoverMatcher
-from argparse
+import argparse
 import glob
 import csv
 import cv2
@@ -33,7 +33,7 @@ cd=CoverDescriptor(useSIFT=useSIFT)
 cv=CoverMatcher(cd, glob.glob(args['covers']+"/*.png"),
     ratio=ratio, minMatches=minMatches, userHamming=useHamming)
 queryImage=cv2.imread(args['query'])
-gray=cv2.cvtColor(queryImage,cv2.COLOR_BGR2GRAY)
+gray=cv2.cvtColor(queryIzmage,cv2.COLOR_BGR2GRAY)
 (queryKps, queryDescs)=cd.describe(gray)
 results=cv.search(queryKps, queryDescs)
 cv2.imshow("Query", queryImage)
