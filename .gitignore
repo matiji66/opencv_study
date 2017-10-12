@@ -1,3 +1,5 @@
 *__pycache__
 *data/
 miniProject/svm.cpickle
+*.pyc
+*.bak
