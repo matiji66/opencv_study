@@ -3,3 +3,4 @@
 miniProject/svm.cpickle
 *.pyc
 *.bak
+*.idea
