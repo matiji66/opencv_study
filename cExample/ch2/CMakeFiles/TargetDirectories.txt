@@ -1,3 +1,0 @@
-/home/scott/github/opencv_study/cExample/ch2/CMakeFiles/edit_cache.dir
-/home/scott/github/opencv_study/cExample/ch2/CMakeFiles/rebuild_cache.dir
-/home/scott/github/opencv_study/cExample/ch2/CMakeFiles/showimage.dir
